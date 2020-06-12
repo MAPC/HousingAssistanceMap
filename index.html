@@ -13,11 +13,12 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <main id="map" class="map" />
+    <main id="map" class="map"></main>
     <div class="map__title-box">
       <h1 class="map__title">Estimated Housing Assistance Need After CARES Act Benefits End (Monthly)</h1>
       <h2 class="map__subtitle">Based on May 2nd Unemployment Claims</h2>
     </div>
+
     <svg height="308" width="168" class="map__legend">
       <text x="12" y="24" class="legend__title">Estimated Housing</text>
       <text x="20" y="44" class="legend__title">Assistance Need</text>
@@ -49,6 +50,7 @@
       <rect x="2" y="280" width="16" height="16" fill="#e8e8e8" stroke="#231F20"/>
       <text x="28" y="292" class="map__legend-entry" fill="#231F20">Data unavailable</text>
     </svg>
+    
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
     <script src="map.js"></script>

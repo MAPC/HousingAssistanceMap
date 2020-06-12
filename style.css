@@ -48,6 +48,10 @@ p {
   z-index: 10;
 }
 
+.map__legend-entry {
+  font-size: .75rem;
+}
+
 .legend__title {
   fill: #231F20;
   font-size: 16px;
@@ -75,9 +79,14 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
-  .map__title-box {
-    max-width: 270px;
+  .map {
+    height: 500px;
   }
+  
+  .map__title-box {
+    max-width: 300px;
+  }
+
   .map__title {
     font-size: 1.15rem;
     line-height: 1.2rem;
@@ -86,5 +95,15 @@ p {
   .map__subtitle {
     font-size: 1rem;
     line-height: 1.05rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .map__legend {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 5px 15px;
+    left: 0;
+    top: 500px;
+    z-index: 10;
   }
 }
