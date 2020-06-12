@@ -3,8 +3,8 @@ const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/ihill/ckbcdolxk0dz91im5toqz9pre',
   center: [-71.566, 42.112],
-  zoom: 8,
-  minZoom: 7,
+  zoom: 7,
+  minZoom: 6,
   maxZoom: 13,
   maxBounds: [
     [-74.728, 38.167], // Southwest bound
