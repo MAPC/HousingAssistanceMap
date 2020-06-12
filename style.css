@@ -23,6 +23,23 @@ p {
   width: 100%;
 }
 
+.map__title-box {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 5px 15px;
+  position: absolute;
+  max-width: 410px;
+  z-index: 10;
+}
+
+.map__title {
+  font-size: 1.5rem;
+  line-height: 1.65rem;
+}
+
+.map__subtitle {
+  font-size: 1.25rem;
+}
+
 .map__legend {
   background-color: rgba(255, 255, 255, .8);
   padding: 5px 15px;
@@ -32,6 +49,7 @@ p {
 }
 
 .legend__title {
+  fill: #231F20;
   font-size: 16px;
   font-weight: bolder;
 }

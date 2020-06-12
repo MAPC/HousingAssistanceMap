@@ -19,8 +19,8 @@ map.on('click', 'housing-assistance', (e) => {
   if (e.features[0].properties.total_Cost_assistance_regunemp) {
     tooltipHtml += `
       <ul class='tooltip__list'>
-        <li class='tooltip__text'>$${d3.format(',')(Math.round(e.features[0].properties.total_Cost_assistance_regunemp))} in total unemployment benefits</li>
-        <li class='tooltip__text'>${d3.format(',')(e.features[0].properties['Total Layoffs'])} total layoffs</li>
+        <li class='tooltip__text'>$${d3.format(',')(Math.round(e.features[0].properties.total_Cost_assistance_regunemp))} in housing assistance need</li>
+        <li class='tooltip__text'>${d3.format(',')(e.features[0].properties['Total Layoffs'])} unemployment claims</li>
         <li class='tooltip__text'>${d3.format(',')(Math.round(e.features[0].properties.total_hhds_impacted_assistance_regunemp))} households need assistance</li>
       </ul>
     `;
