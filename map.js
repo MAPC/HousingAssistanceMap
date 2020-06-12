@@ -14,12 +14,16 @@ const map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
+map.on('load', () => {
+  console.log(map.getStyle())
+})
+
 map.on('click', 'housing-assistance', (e) => {
   let tooltipHtml = `<p class='tooltip__title'>${toCamelCase(e.features[0].properties.muni)}</p>`;
   if (e.features[0].properties.total_Cost_assistance_regunemp) {
     tooltipHtml += `
       <ul class='tooltip__list'>
-        <li class='tooltip__text'>${d3.format('$,.2f')(e.features[0].properties.total_hhds_impacted_assistance_regunemp)} in regular unemployment</li>
+        <li class='tooltip__text'>${d3.format('$,.2f')(e.features[0].properties.total_Cost_assistance_regunemp)} in total unemployment benefits</li>
         <li class='tooltip__text'>${d3.format(',')(e.features[0].properties['Total Layoffs'])} total layoffs</li>
         <li class='tooltip__text'>${d3.format(',.2f')(e.features[0].properties.total_hhds_impacted_assistance_regunemp)} total households need assistance</li>
       </ul>
