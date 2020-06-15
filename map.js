@@ -35,6 +35,20 @@ map.on('click', 'housing-assistance', (e) => {
     .addTo(map);
 })
 
+document.querySelector('.button__collapsible--minus').addEventListener('click', () => {
+  document.querySelector('.map__legend').style.maxHeight = "0";
+  document.querySelector('.maximize-instructions').style.display = 'inline';
+  document.querySelector('.button__collapsible--plus').style.display = 'inline';
+  document.querySelector('.button__collapsible--minus').style.display = 'none';
+})
+
+document.querySelector('.button__collapsible--plus').addEventListener('click', () => {
+  document.querySelector('.map__legend').style.maxHeight = "300px";
+  document.querySelector('.maximize-instructions').style.display = 'none';
+  document.querySelector('.button__collapsible--minus').style.display = 'inline';
+  document.querySelector('.button__collapsible--plus').style.display = 'none';
+})
+
 function toCamelCase(muniName) {
   return muniName.split(" ")
     .map((word) => word.charAt(0).concat(word.slice(1).toLowerCase()))
